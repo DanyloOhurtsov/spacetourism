@@ -1,0 +1,251 @@
+@import "./variables.module.scss";
+
+.destinationComp {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg/destinationBg.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .contentDest {
+        max-width: calc(1100px + 32px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 64px;
+        margin: 0 auto;
+        padding: calc(85px + 5%) 16px 10%;
+    }
+    .titleDest {
+        display: flex;
+        gap: 24px;
+        color: $colorWhite;
+        font-family: $fontFamilySecond;
+        font-size: $fontSize28;
+        font-style: normal;
+        font-weight: $fontWeight400;
+        line-height: normal;
+        letter-spacing: $letterSpacing4-7;
+        text-transform: uppercase;
+        span {
+            font-weight: $fontWeight700;
+            opacity: 25%;
+        }
+    }
+    .cardsDest {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 64px;
+    }
+    .imgCard {
+        width: 445px;
+        height: 445px;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .infoCard {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 444px;
+    }
+    .buttonsCard {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    .cardButton {
+        background: none;
+        outline: none;
+        border: none;
+        color: $colorBlue;
+        font-family: $fontFamilySecond;
+        font-size: $fontSize16;
+        font-style: normal;
+        font-weight: $fontWeight400;
+        line-height: normal;
+        letter-spacing: $letterSpacing2-7;
+        position: relative;
+        padding-bottom: 8px;
+        cursor: pointer;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0);
+            bottom: 0;
+            transition: 250ms;
+        }
+        &:hover {
+            &::after {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+    .activeCardButton {
+        &::after {
+            background-color: white;
+        }
+    }
+    .textInfoCard {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .top {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .titleCardPlanet {
+            color: $colorWhite;
+            font-family: $fontFamilyFirst;
+            font-size: $fontSize100;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+        }
+        .descriptionCard {
+            color: $colorBlue;
+            font-family: $fontFamilyThird;
+            font-size: $fontSize18;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: $lineHeight32;
+        }
+    }
+    .lineCard {
+        width: 100%;
+        height: 1px;
+        background-color: #383b4b;
+    }
+    .travelDataCard {
+        display: flex;
+        gap: 80px;
+    }
+    .itemTravel {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .titleTravel {
+            color: $colorBlue;
+            font-family: $fontFamilySecond;
+            font-size: $fontSize14;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+            letter-spacing: $letterSpacing2-3;
+            text-transform: uppercase;
+        }
+        .valueTravel {
+            color: $colorWhite;
+            font-family: $fontFamilyFirst;
+            font-size: $fontSize28;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .destinationComp {
+        .contentDest {
+            max-width: 573px;
+            gap: 48px;
+        }
+        .titleDest {
+            font-size: $fontSize20;
+            letter-spacing: $letterSpacing3-3;
+        }
+        .cardsDest {
+            align-items: center;
+            flex-direction: column;
+        }
+        .imgCard {
+            max-width: 300px;
+            max-height: 300px;
+        }
+        .infoCard {
+            align-items: center;
+            gap: 32px;
+            width: 100%;
+        }
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+            .titleCardPlanet {
+                font-size: $fontSize80;
+            }
+            .descriptionCard {
+                font-size: $fontSize16;
+                line-height: $lineHeight28;
+            }
+        }
+        .travelDataCard {
+            justify-content: center;
+        }
+        .itemTravel {
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .destinationComp {
+        .contentDest {
+            max-width: 327px;
+            gap: 32px;
+            align-items: center;
+        }
+        .titleDest {
+            font-size: $fontSize16;
+            letter-spacing: $letterSpacing2-7;
+        }
+        .cardsDest {
+            gap: 32px;
+        }
+        .imgCard {
+            width: 170px;
+            height: 170px;
+        }
+        .infoCard {
+            align-items: center;
+            width: 100%;
+            gap: 16px;
+        }
+        .buttonsCard {
+            gap: 24px;
+        }
+        .cardButton {
+            &:hover {
+                &::after {
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+        .textInfoCard {
+            gap: 24px;
+        }
+        .top {
+            .titleCardPlanet {
+                font-size: $fontSize56;
+            }
+            .descriptionCard {
+                font-size: $fontSize15;
+                line-height: $lineHeight25;
+            }
+        }
+        .travelDataCard {
+            gap: 32px;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@import "./variables.module.scss";
+
+.heroComp {
+    width: 100%;
+    background-image: url("../img/bg/headerBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding: calc(85px + 10%) 16px 10%;
+    .contentHero {
+        max-width: 1110px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .textContent {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 50%;
+        h5 {
+            color: $colorBlue;
+            font-family: $fontFamilySecond;
+            font-size: $fontSize28;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+            letter-spacing: $letterSpacing4-7;
+        }
+        h1 {
+            color: $colorWhite;
+            font-family: $fontFamilyFirst;
+            font-size: $fontSize150;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        p {
+            color: $colorBlue;
+            font-family: $fontFamilyThird;
+            font-size: $fontSize18;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: $lineHeight32;
+        }
+    }
+    .exploreBtn {
+        border: none;
+        background: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 274px;
+        height: 274px;
+        border-radius: 50%;
+        color: $colorBlack;
+        font-family: $fontFamilyFirst;
+        font-size: $fontSize32;
+        font-style: normal;
+        font-weight: $fontWeight400;
+        line-height: normal;
+        letter-spacing: $letterSpacing2;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        background-color: white;
+        &::before {
+            width: 100%;
+            height: 100%;
+            transition: 500ms ease-out;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translatex(-50%);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1036);
+        }
+        &:hover {
+            &::before {
+                width: calc(100% + 50%);
+                height: calc(100% + 50%);
+            }
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .heroComp {
+        background-image: url("../img/bg/headerDeskBG.png");
+        .contentHero {
+            gap: 160px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 450px;
+        }
+        .textContent {
+            width: 100%;
+            h5 {
+                font-size: $fontSize20;
+                letter-spacing: $letterSpacing3-3;
+            }
+            h1 {
+                line-height: $lineHeight150;
+            }
+            p {
+                font-size: $fontSize16;
+                line-height: $lineHeight28;
+            }
+        }
+        .exploreBtn {
+            width: 240px;
+            height: 240px;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .heroComp {
+        .contentHero {
+            gap: 80px;
+        }
+        .textContent {
+            gap: 16px;
+            h5 {
+                font-size: $fontSize16;
+                letter-spacing: $letterSpacing2-7;
+            }
+            h1 {
+                font-size: $fontSize80;
+                line-height: $lineHeight100;
+            }
+            p {
+                font-size: $fontSize15;
+                line-height: $lineHeight25;
+            }
+        }
+        .exploreBtn {
+            width: 150px;
+            height: 150px;
+            font-size: $fontSize20;
+            letter-spacing: $letterSpacing1-2;
+        }
+    }
+}

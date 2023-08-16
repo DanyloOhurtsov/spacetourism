@@ -1,0 +1,40 @@
+@import "./styles/variables.module.scss";
+
+// DESKTOP
+.header1,
+.header2,
+.header3 {
+    transition: 250ms;
+    font-family: $fontFamilyFirst;
+    font-weight: $fontWeight400;
+}
+.header1 {
+    color: $colorWhite;
+    font-size: $fontSize150;
+    font-style: normal;
+    line-height: normal;
+}
+.header2 {
+    color: $colorWhite;
+    font-size: $fontSize100;
+    font-style: normal;
+    line-height: normal;
+}
+.header3 {
+    color: $colorWhite;
+    font-size: $fontSize56;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+}
+body{
+    background-color: $colorBlack;
+}
+
+// MOBILE
+@media screen and(max-width: 375px) {
+    // HEADER 1
+    .header1 {
+        font-size: $fontSize100;
+    }
+}
