@@ -8,9 +8,9 @@ import { Technology } from "./Technology";
 
 export const Main = () => {
     const [activeButtonIndex, setActiveButtonIndex] = useState("HOME");
-    const [showHOME, setShowHOME] = useState(false);
+    const [showHOME, setShowHOME] = useState(true);
     const [showDESTINATION, setShowDESTINATION] = useState(false);
-    const [showCREW, setShowCREW] = useState(true);
+    const [showCREW, setShowCREW] = useState(false);
     const [showTECHNOLOGY, setShowTECHNOLOGY] = useState(false);
     const setters = {
         setShowHOME,
