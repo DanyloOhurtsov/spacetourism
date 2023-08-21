@@ -9,8 +9,13 @@ import crew1 from "./crew/crew1.png";
 import crew2 from "./crew/crew2.png";
 import crew3 from "./crew/crew3.png";
 import crew4 from "./crew/crew4.png";
+// TECHNOLOGY
+import tech1 from "./technology/tech1.png";
+import tech2 from "./technology/tech2.png";
+import tech3 from "./technology/tech3.png";
 
 export const imagesFolders = {
+    headerLogo,
     destination: {
         moon,
         mars,
@@ -23,15 +28,9 @@ export const imagesFolders = {
         crew3,
         crew4,
     },
-};
-export const images = {
-    headerLogo,
-    moon,
-    mars,
-    europa,
-    titan,
-    crew1,
-    crew2,
-    crew3,
-    crew4,
+    technology: {
+        tech1,
+        tech2,
+        tech3,
+    },
 };

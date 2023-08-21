@@ -1,0 +1,223 @@
+@import "./variables.module.scss";
+
+.technologyComp {
+    min-height: 100svh;
+    height: fit-content;
+    width: 100%;
+    background-image: url("../img/bg/technologyBg.jpg");
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: calc(85px + 5%) 16px 80px;
+    .contentTech {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-left: 160px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .titleTech {
+        display: flex;
+        gap: 24px;
+        color: $colorWhite;
+        font-family: $fontFamilySecond;
+        font-size: $fontSize28;
+        font-style: normal;
+        font-weight: $fontWeight400;
+        line-height: normal;
+        letter-spacing: $letterSpacing4-7;
+        span {
+            opacity: 0.5;
+            font-weight: $fontWeight700;
+        }
+    }
+    .infoTech {
+        display: flex;
+        gap: 56px;
+        justify-content: space-between;
+    }
+    .textInfo {
+        display: flex;
+        gap: 80px;
+        align-items: center;
+    }
+    .paginationButtons {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        .paginationButton {
+            background: none;
+            border: none;
+            outline: none;
+            width: 80px;
+            height: 80px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: $colorWhite;
+            font-family: $fontFamilyFirst;
+            font-size: $fontSize32;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+            letter-spacing: $letterSpacing2;
+            transition: 250ms;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid white;
+            }
+        }
+        .activeButton {
+            background-color: white;
+            color: $colorBlack;
+        }
+    }
+    .textInfoTech {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 500px;
+        .titleTech2 {
+            color: $colorBlue;
+            font-family: $fontFamilySecond;
+            font-size: $fontSize16;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+            letter-spacing: $letterSpacing2-7;
+        }
+        .title1Tech {
+            color: $colorWhite;
+            font-family: $fontFamilyFirst;
+            font-size: $fontSize56;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: normal;
+        }
+        .descriptionTech {
+            color: $colorBlue;
+            font-family: $fontFamilyThird;
+            font-size: $fontSize18;
+            font-style: normal;
+            font-weight: $fontWeight400;
+            line-height: $lineHeight32;
+        }
+    }
+    .imageInfo {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 500px;
+        img {
+            object-fit: cover;
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .technologyComp {
+        padding: calc(85px + 5%) 0 80px;
+        .contentTech {
+            max-width: 768px;
+            padding-left: 0;
+            gap: 60px;
+        }
+        .titleTech {
+            margin-left: 40px;
+            font-size: $fontSize20;
+            letter-spacing: $letterSpacing3-3;
+        }
+        .infoTech {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .textInfo {
+            gap: 40px;
+            flex-direction: column;
+        }
+        .paginationButtons {
+            flex-direction: row;
+            gap: 16px;
+            .paginationButton {
+                width: 58px;
+                height: 58px;
+                font-size: $fontSize24;
+                letter-spacing: $letterSpacing1-5;
+                &:hover {
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+        .textInfoTech {
+            align-items: center;
+            max-width: 464px;
+            text-align: center;
+            .title1Tech {
+                font-size: $fontSize40;
+            }
+            .descriptionTech {
+                font-size: $fontSize16;
+                line-height: $lineHeight28;
+            }
+        }
+        .imageInfo {
+            width: 100%;
+            height: 310px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .technologyComp {
+        .contentTech {
+            max-width: 375px;
+            gap: 32px;
+        }
+        .titleTech {
+            margin: 0 auto;
+            font-size: $fontSize16;
+            letter-spacing: $letterSpacing2-7;
+        }
+        .infoTech {
+            gap: 32px;
+        }
+        .textInfo {
+            gap: 24px;
+        }
+        .paginationButtons {
+            gap: 16px;
+            .paginationButton {
+                width: 40px;
+                height: 40px;
+                font-size: $fontSize16;
+                letter-spacing: $letterSpacing1;
+            }
+        }
+        .textInfoTech {
+            max-width:calc(328px + 16px);
+            padding: 0 8px;
+            .titleTech2 {
+                font-size: $fontSize14;
+                letter-spacing: $letterSpacing2-3;
+            }
+            .title1Tech {
+                font-size: $fontSize24;
+            }
+            .descriptionTech {
+                font-size: $fontSize15;
+                line-height: $lineHeight25;
+            }
+        }
+        .imageInfo {
+            width: 100%;
+            height: 170px;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { images } from "../img/images";
+import { imagesFolders } from "../img/images";
 import { stylesAll } from "../styles/styles";
 
 export const Navbar = ({ value }) => {
@@ -70,7 +70,7 @@ export const Navbar = ({ value }) => {
         <div className={styles.navbarComp}>
             <div className={styles.insideNavbar}>
                 <a href="index.html" className={styles.headerLogo}>
-                    <img src={images.headerLogo} alt="headerLogo" />
+                    <img src={imagesFolders.headerLogo} alt="headerLogo" />
                 </a>
                 {/* DESKTOP */}
                 <div className={styles.navigationNavbar}>

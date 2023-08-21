@@ -4,7 +4,7 @@ import { Navbar } from "./Navbar";
 import styles from "../styles/navbar.module.scss";
 import { Destination } from "./destination/Destination";
 import { Crew } from "./Crew";
-import { Technology } from "./Technology";
+import { Technology } from "./technology/Technology";
 
 export const Main = () => {
     const [activeButtonIndex, setActiveButtonIndex] = useState("HOME");
@@ -21,8 +21,19 @@ export const Main = () => {
 
     return (
         <div>
-            <Navbar value={{ styles, setters, activeButtonIndex, setActiveButtonIndex }} />
-            {showHOME && <Hero value={{setters, setActiveButtonIndex, activeButtonIndex}}/>}
+            <Navbar
+                value={{
+                    styles,
+                    setters,
+                    activeButtonIndex,
+                    setActiveButtonIndex,
+                }}
+            />
+            {showHOME && (
+                <Hero
+                    value={{ setters, setActiveButtonIndex, activeButtonIndex }}
+                />
+            )}
             {showDESTINATION && <Destination />}
             {showCREW && <Crew />}
             {showTECHNOLOGY && <Technology />}
